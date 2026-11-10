@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="校园建筑与书桌插画">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff4f0"/><stop offset="1" stop-color="#eaf0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="18" fill="url(#sky)"/>
+  <circle cx="158" cy="42" r="20" fill="#ffd9a9" opacity=".85"/>
+
+  <!-- 教学楼 -->
+  <rect x="28" y="62" width="112" height="74" rx="4" fill="#ffffff"/>
+  <path d="M22 62l62-28 62 28z" fill="#2fa79b"/>
+  <rect x="82" y="82" width="16" height="54" rx="2" fill="#c9e6e1"/>
+  <g fill="#bcd9f2">
+    <rect x="38" y="76" width="16" height="14" rx="2"/><rect x="60" y="76" width="16" height="14" rx="2"/>
+    <rect x="106" y="76" width="16" height="14" rx="2"/><rect x="128" y="76" width="8" height="14" rx="2"/>
+    <rect x="38" y="100" width="16" height="14" rx="2"/><rect x="60" y="100" width="16" height="14" rx="2"/>
+    <rect x="106" y="100" width="16" height="14" rx="2"/><rect x="128" y="100" width="8" height="14" rx="2"/>
+  </g>
+  <!-- 树 -->
+  <rect x="158" y="112" width="6" height="30" fill="#b98a68"/>
+  <circle cx="161" cy="102" r="20" fill="#78c9b4"/>
+  <circle cx="150" cy="110" r="12" fill="#9ad9c7"/>
+
+  <!-- 桌面与笔记本电脑 -->
+  <rect x="0" y="140" width="200" height="60" fill="#cfe3dc"/>
+  <rect x="0" y="140" width="200" height="5" fill="#a9cfc4"/>
+  <rect x="62" y="146" width="76" height="38" rx="3" fill="#20323f"/>
+  <rect x="67" y="151" width="66" height="28" rx="2" fill="#3b5a68"/>
+  <path d="M74 159h30M74 166h44M74 173h20" stroke="#7fe0d0" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M52 184h96l7 8H45z" fill="#e8f2f5"/>
+  <rect x="150" y="158" width="26" height="26" rx="3" fill="#ff9a78" opacity=".85"/>
+  <path d="M156 166h14M156 172h14" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+</svg>

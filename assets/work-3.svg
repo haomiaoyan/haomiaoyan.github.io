@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" width="420" height="220" role="img" aria-label="交互待办清单示意图：可勾选的任务列表与本地保存">
+  <rect width="420" height="220" fill="#eaf2f7"/>
+  <rect x="60" y="14" width="300" height="192" rx="14" fill="#ffffff"/>
+  <rect x="60" y="14" width="300" height="26" rx="14" fill="#2fa79b"/>
+  <rect x="60" y="30" width="300" height="10" fill="#2fa79b"/>
+  <rect x="78" y="22" width="120" height="10" rx="5" fill="#ffffff" opacity=".85"/>
+  <!-- 输入框 -->
+  <rect x="78" y="52" width="200" height="26" rx="8" fill="#f1f7fa" stroke="#d5e5ec"/>
+  <rect x="88" y="62" width="96" height="6" rx="3" fill="#b6cede"/>
+  <rect x="288" y="52" width="54" height="26" rx="8" fill="#6b8cf5"/>
+  <path d="M306 65h18M315 56v18" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 任务行 -->
+  <g>
+    <rect x="78" y="90" width="264" height="28" rx="8" fill="#f7fbfc"/>
+    <circle cx="96" cy="104" r="8" fill="#5fd0c2"/>
+    <path d="M92 104l3 3 5-6" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="112" y="100" width="120" height="7" rx="3" fill="#b6cede"/>
+    <rect x="318" y="99" width="14" height="10" rx="3" fill="#dce8ef"/>
+
+    <rect x="78" y="124" width="264" height="28" rx="8" fill="#f7fbfc"/>
+    <circle cx="96" cy="138" r="8" fill="none" stroke="#c7d9e4" stroke-width="2"/>
+    <rect x="112" y="134" width="152" height="7" rx="3" fill="#7d94a3"/>
+    <rect x="318" y="133" width="14" height="10" rx="3" fill="#dce8ef"/>
+
+    <rect x="78" y="158" width="264" height="28" rx="8" fill="#f7fbfc"/>
+    <circle cx="96" cy="172" r="8" fill="none" stroke="#c7d9e4" stroke-width="2"/>
+    <rect x="112" y="168" width="104" height="7" rx="3" fill="#7d94a3"/>
+    <rect x="318" y="167" width="14" height="10" rx="3" fill="#dce8ef"/>
+  </g>
+  <text x="78" y="198" font-family="Consolas, monospace" font-size="9" fill="#8b9ca9">addEventListener + localStorage</text>
+</svg>

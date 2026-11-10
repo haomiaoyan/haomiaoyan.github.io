@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="胡昊的个人主页：福州大学软件工程专业，记录专业课程、前端技能与课程小项目。">
+    <title>胡昊的个人主页 | Web Programming 课程作业</title>
+    <!-- 样式表单独存放，结构（HTML）与表现（CSS）分离 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 跳转到主内容：无障碍小细节 -->
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <!-- ============ 顶部导航：HTML5 语义标签 header / nav ============ -->
+    <header class="site-header" id="top">
+        <div class="page header-inner">
+            <a class="brand" href="#top" aria-label="返回首页">
+                <span class="brand-mark" aria-hidden="true">H</span>
+                <span class="brand-text">胡昊<span class="brand-en"> / Hu Hao</span></span>
+            </a>
+            <nav aria-label="主导航">
+                <!-- 内部锚点链接：点击平滑滚动到对应 section -->
+                <ul class="nav-list">
+                    <li><a class="nav-link is-active" href="#about">关于我</a></li>
+                    <li><a class="nav-link" href="#courses">专业与课程</a></li>
+                    <li><a class="nav-link" href="#works">技能与作品</a></li>
+                    <!-- 外部链接用单独的类，不参与「当前区块」高亮 -->
+                    <li>
+                        <a class="nav-link-ext" href="https://github.com/haomiaoyan" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                            GitHub<span class="ext-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="theme-btn" id="themeToggle" type="button" aria-label="切换深浅主题" aria-pressed="false">
+                <span id="themeText">夜间模式</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ============ 01 首屏 / 关于我 ============ -->
+        <section class="hero" id="about" aria-labelledby="heroTitle">
+            <div class="page hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-dot"></span> HELLO, WELCOME TO MY PAGE</p>
+                    <!-- 主标题：h1 只出现一次；渐变流光文字是 CSS 文字效果 -->
+                    <h1 class="hero-title" id="heroTitle">你好，我是 <span class="gradient-text">胡昊</span></h1>
+                    <!-- 打字机文字效果：文字由 JavaScript 逐字输出 -->
+                    <p class="type-line" aria-live="polite">
+                        <span class="type-prompt">&gt;</span>
+                        <span id="typewriter">软件工程 · 2024 级本科生</span><span class="caret" aria-hidden="true"></span>
+                    </p>
+                    <p class="hero-desc">
+                        就读于 <strong>福州大学软件工程</strong> 专业，正在系统学习 Web 前端开发。
+                        喜欢把课堂上的 <em>HTML 结构、CSS 布局、JavaScript 交互</em> 一点点拼成能真正打开、能点、会动的页面。
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#courses">看看我的课程 <span aria-hidden="true">→</span></a>
+                        <a class="btn btn-ghost" href="#works">浏览作品 <span aria-hidden="true">↗</span></a>
+                        <!-- 外部链接：新窗口打开，加 rel="noopener noreferrer" 更安全 -->
+                        <a class="btn btn-ghost" href="https://github.com/haomiaoyan" target="_blank" rel="noopener noreferrer">
+                            GitHub <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                    <!-- 数字滚动动画：data-count 是最终数值，由 JS 从 0 递增 -->
+                    <ul class="stat-row">
+                        <li><strong class="count" data-count="9">9</strong><span>本学期课程</span></li>
+                        <li><strong class="count" data-count="4">4</strong><span>课程小项目</span></li>
+                        <li><strong class="count" data-count="700">700</strong><span>累计练习天数 +</span></li>
+                    </ul>
+                </div>
+
+                <!-- 鼠标 3D 倾斜卡片：data-tilt 由 JS 监听鼠标位置 -->
+                <div class="hero-visual tilt-card" data-tilt>
+                    <span class="blob blob-a" aria-hidden="true"></span>
+                    <span class="blob blob-b" aria-hidden="true"></span>
+                    <div class="avatar-card">
+                        <div class="avatar-frame">
+                            <!-- 本地 SVG 插画，页面无需联网也能完整显示 -->
+                            <img src="assets/avatar.svg" width="280" height="280" alt="胡昊的插画头像：一位坐在电脑前写代码的同学">
+                        </div>
+                        <div class="avatar-caption">
+                            <strong>胡昊 / Hu Hao</strong>
+                            <span>软件工程 · 2024 级</span>
+                        </div>
+                    </div>
+                    <div class="orbit-badge" aria-hidden="true">SE<br>2024</div>
+                    <span class="float-note note-a">HTML + CSS + JS</span>
+                    <span class="float-note note-b">Keep building.</span>
+                </div>
+            </div>
+            <div class="scroll-hint" aria-hidden="true">向下滚动<span class="scroll-line"></span></div>
+        </section>
+
+        <!-- 关于我补充卡片：特色图片用 float 实现图文环绕（CSS 课上学到的传统布局） -->
+        <section class="about-strip" aria-label="关于我补充介绍">
+            <div class="page">
+                <article class="card about-card" data-reveal>
+                    <img class="feature" src="assets/campus.svg" width="200" height="200" alt="书桌、笔记本电脑与校园建筑的插画">
+                    <h2>一点点关于我</h2>
+                    <p>
+                        我是一名普通但爱折腾的工科生。第一次用 <code>&lt;h1&gt;</code> 把名字显示在浏览器里的时候，
+                        就觉得「写几行字、刷新一下就能看到结果」这件事很神奇。后来学了 CSS，才开始明白
+                        <strong>结构与表现分离</strong>的意义；再往后接触 JavaScript，页面终于可以回应我的点击。
+                    </p>
+                    <p>
+                        这学期的目标很朴素：把 <em>语义化标签、表格与表单、Flex / Grid 布局、原生 DOM 操作</em>
+                        练到不用查文档也能写出来，然后独立完成几个能拿得出手的小项目。
+                    </p>
+                    <p>
+                        写过的课程项目和小工具都开源在
+                        <a href="https://github.com/haomiaoyan" target="_blank" rel="noopener noreferrer">GitHub（@haomiaoyan）</a>
+                        上，比如分子宇宙 MolCosmos、NEUROATLAS；也习惯把踩过的坑顺手写成 README。
+                    </p>
+                    <blockquote>
+                        <q>把复杂的东西讲清楚，把简单的东西做漂亮。</q>
+                        <cite>—— 我给自己写前端笔记时定下的小原则</cite>
+                    </blockquote>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ 02 专业与课程 ============ -->
+        <section class="section" id="courses" aria-labelledby="coursesTitle">
+            <div class="page">
+                <header class="section-head" data-reveal>
+                    <p class="section-kicker">01 / MAJOR &amp; COURSES</p>
+                    <h2 class="section-title split-text" id="coursesTitle">专业与课程</h2>
+                    <svg class="hand-line" viewBox="0 0 220 14" aria-hidden="true" preserveAspectRatio="none">
+                        <path d="M2 10 C 45 2, 85 13, 125 6 S 195 3, 218 9" />
+                    </svg>
+                    <p class="section-lead">课堂上学到的标签、属性和布局方法，都能在这里找到对应的练习痕迹。</p>
+                </header>
+
+                <div class="course-grid">
+                    <!-- 专业信息：dl / dt / dd 语义化描述列表 -->
+                    <article class="card info-card" data-reveal>
+                        <p class="card-kicker">MY PROFILE</p>
+                        <h3>基本信息</h3>
+                        <dl class="info-list">
+                            <div><dt>学校</dt><dd>福州大学</dd></div>
+                            <div><dt>学院 / 专业</dt><dd>计算机与大数据学院 · 软件工程</dd></div>
+                            <div><dt>年级</dt><dd>2024 级（大三上）</dd></div>
+                            <div><dt>方向</dt><dd>Web 前端开发 / 交互设计</dd></div>
+                            <div><dt>GitHub</dt><dd><a href="https://github.com/haomiaoyan" target="_blank" rel="noopener noreferrer">github.com/haomiaoyan</a></dd></div>
+                        </dl>
+                        <p class="info-foot">参考教程：<a href="https://developer.mozilla.org/zh-CN/docs/Web" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
+                    </article>
+
+                    <!-- 有序列表 ol：本学期学习计划 -->
+                    <article class="card plan-card" data-reveal>
+                        <p class="card-kicker">THIS TERM</p>
+                        <h3>本学期学习计划</h3>
+                        <ol class="plan-list">
+                            <li>复习 HTML5 语义标签，保证每份页面都通过结构校验</li>
+                            <li>用 Flexbox 与 Grid 各写一遍双栏布局并对比差异</li>
+                            <li>练习原生 DOM 事件，做 3 个不依赖库的小交互</li>
+                            <li>把「个人主页」打磨成可以长期维护的作品</li>
+                        </ol>
+                        <p class="card-note"><strong>进度：</strong>第 4 项进行中，这个页面就是阶段成果。</p>
+                    </article>
+
+                    <!-- 表格：练习 colspan / rowspan / th / caption -->
+                    <article class="card table-card" data-reveal>
+                        <h3>我的本周课表 <span class="tag">table · rowspan · colspan</span></h3>
+                        <div class="table-wrap">
+                            <table>
+                                <caption>2026 秋季学期 · 第 10 周（11 月 2 日–8 日），内容取自我的真实课表</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">节次 / 时间</th>
+                                        <th scope="col">周一 11/2</th><th scope="col">周二 11/3</th>
+                                        <th scope="col">周三 11/4</th><th scope="col">周四 11/5</th>
+                                        <th scope="col">周五 11/6</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">第 1-2 节<span class="cell-time">08:20–10:00</span></th>
+                                        <td class="is-empty">—</td>
+                                        <!-- rowspan="2"：软工实践连上四节，跨两行显示 -->
+                                        <td class="hl" rowspan="2">
+                                            <strong>软件工程实践</strong>
+                                            <span class="cell-meta">软工 · 数计 3-301</span>
+                                            <span class="cell-span">第 1-4 节</span>
+                                        </td>
+                                        <td class="is-empty">—</td>
+                                        <td class="is-empty">—</td>
+                                        <td class="is-empty">—</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">第 3-4 节<span class="cell-time">10:20–12:00</span></th>
+                                        <td>
+                                            <strong>面向对象分析与设计</strong>
+                                            <span class="cell-meta">软工 · 西 1-105</span>
+                                        </td>
+                                        <td>
+                                            <strong>体育（四）</strong>
+                                            <span class="cell-meta">待定场所</span>
+                                        </td>
+                                        <td class="is-empty">—</td>
+                                        <!-- rowspan="3"：Web 程序设计实践连上六节，跨三行 -->
+                                        <td class="hl-2" rowspan="3">
+                                            <strong>Web 程序设计实践</strong>
+                                            <span class="cell-meta">软工 · 数计 3-302</span>
+                                            <span class="cell-span">第 3-8 节</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">第 5-6 节<span class="cell-time">14:00–15:40</span></th>
+                                        <td class="hl">
+                                            <strong>软件工程</strong>
+                                            <span class="cell-meta">软工 · 东 3-306</span>
+                                        </td>
+                                        <td class="is-empty">—</td>
+                                        <td class="hl">
+                                            <strong>软件工程</strong>
+                                            <span class="cell-meta">软工 · 东 3-306</span>
+                                        </td>
+                                        <td class="is-empty">—</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">第 7-8 节<span class="cell-time">15:50–17:30</span></th>
+                                        <td class="is-empty">—</td>
+                                        <td>
+                                            <strong>大学应用写作</strong>
+                                            <span class="cell-meta">西 1-302</span>
+                                        </td>
+                                        <td class="is-empty">—</td>
+                                        <td class="is-empty">—</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">第 9-11 节<span class="cell-time">19:00–21:35</span></th>
+                                        <td class="hl-2">
+                                            <strong>生物信息学</strong>
+                                            <span class="cell-meta">东 3-305</span>
+                                        </td>
+                                        <td class="hl-2">
+                                            <strong>医学人工智能导论</strong>
+                                            <span class="cell-meta">东 3-307</span>
+                                        </td>
+                                        <td class="hl-2">
+                                            <strong>超大规模集成电路 CAD</strong>
+                                            <span class="cell-meta">东 3-305</span>
+                                        </td>
+                                        <td class="is-empty">—</td>
+                                        <td class="is-empty">—</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="row">周末</th>
+                                        <!-- colspan="5"：一行横跨五列 -->
+                                        <td colspan="5">周六、周日没有课，留给复习、写代码和打磨这个页面</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <p class="table-note">本学期共 <b>9 门课</b>：<b>rowspan</b> 让一门连排的课跨行显示，<b>colspan</b> 用在了周末整行上。</p>
+                    </article>
+
+                    <!-- 表单：input / select / textarea / radio / checkbox + HTML5 新类型 -->
+                    <article class="card form-card" data-reveal>
+                        <h3>本周学习打卡 <span class="tag">form · HTML5</span></h3>
+                        <form id="studyForm">
+                            <div class="field">
+                                <label for="goal">本周目标 <span class="req">*</span></label>
+                                <input id="goal" name="goal" type="text" placeholder="例如：完成 Grid 布局练习" required
+                                       pattern="[\u4e00-\u9fa5A-Za-z0-9 ，。、]{2,30}">
+                            </div>
+                            <fieldset class="field">
+                                <legend>学习状态</legend>
+                                <label class="inline"><input type="radio" name="mood" value="顺利" checked> 顺利</label>
+                                <label class="inline"><input type="radio" name="mood" value="一般"> 一般</label>
+                                <label class="inline"><input type="radio" name="mood" value="需要加把劲"> 需要加把劲</label>
+                            </fieldset>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="course">关联课程</label>
+                                    <select id="course" name="course">
+                                        <option>Web 程序设计实践</option><option>软件工程</option>
+                                        <option>软件工程实践</option><option>面向对象分析与设计</option>
+                                        <option>生物信息学</option><option>医学人工智能导论</option>
+                                        <option>大学应用写作</option><option>体育（四）</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="planDate">计划日期</label>
+                                    <input id="planDate" name="planDate" type="date">
+                                </div>
+                            </div>
+                            <fieldset class="field">
+                                <legend>学习方式（可多选）</legend>
+                                <label class="inline"><input type="checkbox" name="way" value="看文档"> 看文档</label>
+                                <label class="inline"><input type="checkbox" name="way" value="写代码"> 写代码</label>
+                                <label class="inline"><input type="checkbox" name="way" value="做笔记"> 做笔记</label>
+                            </fieldset>
+                            <div class="field">
+                                <label for="hours">预计投入：<output id="hoursOut" for="hours">4</output> 小时</label>
+                                <input id="hours" name="hours" type="range" min="1" max="12" value="4">
+                            </div>
+                            <div class="field">
+                                <label for="email">提醒邮箱（选填）</label>
+                                <input id="email" name="email" type="email" placeholder="name@example.com">
+                            </div>
+                            <div class="field">
+                                <label for="note">备注</label>
+                                <textarea id="note" name="note" rows="2" placeholder="想记下来的问题或收获……"></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn btn-primary" type="submit">保存本周计划</button>
+                                <button class="btn btn-ghost" type="reset">重置</button>
+                            </div>
+                        </form>
+                        <p class="form-tip" id="formTip" role="status">表单数据只保存在本机浏览器，不会上传到任何服务器。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 03 技能与作品 ============ -->
+        <section class="section section-alt" id="works" aria-labelledby="worksTitle">
+            <div class="page">
+                <header class="section-head" data-reveal>
+                    <p class="section-kicker">02 / SKILLS &amp; WORKS</p>
+                    <h2 class="section-title split-text" id="worksTitle">技能与作品</h2>
+                    <svg class="hand-line" viewBox="0 0 220 14" aria-hidden="true" preserveAspectRatio="none">
+                        <path d="M2 10 C 45 2, 85 13, 125 6 S 195 3, 218 9" />
+                    </svg>
+                    <p class="section-lead">技能条会随滚动逐条生长，作品卡片可以按技术分类筛选、点击展开详情。</p>
+                </header>
+
+                <div class="skill-layout">
+                    <!-- 技能进度条：ul / li + JS 宽度动画 -->
+                    <article class="card skill-card" data-reveal>
+                        <p class="card-kicker">WHAT I PRACTICE</p>
+                        <h3>前端技能树</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-top"><span>HTML5 语义化 / 表单</span><b class="skill-num" data-num="90">90%</b></div>
+                                <div class="skill-track"><span class="skill-fill" data-level="90"></span></div>
+                            </li>
+                            <li>
+                                <div class="skill-top"><span>CSS3 · Flex / Grid</span><b class="skill-num" data-num="85">85%</b></div>
+                                <div class="skill-track"><span class="skill-fill" data-level="85"></span></div>
+                            </li>
+                            <li>
+                                <div class="skill-top"><span>JavaScript · DOM 事件</span><b class="skill-num" data-num="75">75%</b></div>
+                                <div class="skill-track"><span class="skill-fill" data-level="75"></span></div>
+                            </li>
+                            <li>
+                                <div class="skill-top"><span>响应式 / 无障碍</span><b class="skill-num" data-num="70">70%</b></div>
+                                <div class="skill-track"><span class="skill-fill" data-level="70"></span></div>
+                            </li>
+                            <li>
+                                <div class="skill-top"><span>Git 版本管理</span><b class="skill-num" data-num="60">60%</b></div>
+                                <div class="skill-track"><span class="skill-fill" data-level="60"></span></div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- pre / code / var：展示一段本页用到的小函数 -->
+                    <article class="card code-card" data-reveal>
+                        <p class="card-kicker">CODE NOTE</p>
+                        <h3>页面里的一段小代码</h3>
+                        <p>技能条的宽度是这样被「唤醒」的：</p>
+                        <pre><code>function fillSkills(el) {
+  const level = el.dataset.level;
+  el.style.width = level + '%';
+}
+document.querySelectorAll('.skill-fill')
+        .forEach(fillSkills);</code></pre>
+                        <p class="code-note">其中 <var>level</var> 表示目标百分比；参考
+                            <a href="https://www.w3school.com.cn/js/index.asp" target="_blank" rel="noopener noreferrer">W3School JS 教程</a>。
+                        </p>
+                    </article>
+                </div>
+
+                <div class="works-head" data-reveal>
+                    <h3>课程小项目 <span class="works-count">共 4 个</span></h3>
+                    <!-- 筛选按钮：JS 根据 data-filter 显示 / 隐藏作品卡片 -->
+                    <div class="filter-tabs" id="filterTabs" role="group" aria-label="按技术分类筛选作品">
+                        <button class="tab is-active" type="button" data-filter="all">全部</button>
+                        <button class="tab" type="button" data-filter="html">HTML</button>
+                        <button class="tab" type="button" data-filter="css">CSS</button>
+                        <button class="tab" type="button" data-filter="js">JavaScript</button>
+                    </div>
+                </div>
+
+                <div class="works-grid" id="worksGrid">
+                    <article class="card work-card tilt-card" data-category="html" data-work="1" data-reveal>
+                        <div class="work-thumb"><img src="assets/work-1.svg" width="420" height="220" alt="语义化自我介绍页的示意图"></div>
+                        <div class="work-body">
+                            <span class="work-index">PROJECT 01</span>
+                            <h4>语义化自我介绍页</h4>
+                            <p>用 HTML5 语义标签、课表表格和表单完成的第一次自我介绍作业。</p>
+                            <span class="chip">HTML5</span><span class="chip">表格 / 表单</span>
+                            <button class="detail-btn" type="button" data-work="1">查看详情 <span aria-hidden="true">→</span></button>
+                        </div>
+                    </article>
+
+                    <article class="card work-card tilt-card" data-category="css" data-work="2" data-reveal>
+                        <div class="work-thumb"><img src="assets/work-2.svg" width="420" height="220" alt="双栏布局练习的示意图"></div>
+                        <div class="work-body">
+                            <span class="work-index">PROJECT 02</span>
+                            <h4>双栏布局练习</h4>
+                            <p>同一份内容分别用 float 与 Flex/Grid 实现，对比两种布局思路。</p>
+                            <span class="chip">CSS3</span><span class="chip">Flex / Grid</span>
+                            <button class="detail-btn" type="button" data-work="2">查看详情 <span aria-hidden="true">→</span></button>
+                        </div>
+                    </article>
+
+                    <article class="card work-card tilt-card" data-category="js" data-work="3" data-reveal>
+                        <div class="work-thumb"><img src="assets/work-3.svg" width="420" height="220" alt="交互待办清单的示意图"></div>
+                        <div class="work-body">
+                            <span class="work-index">PROJECT 03</span>
+                            <h4>交互待办清单</h4>
+                            <p>原生 DOM 增删改查 + localStorage，实现可勾选、可删除的清单。</p>
+                            <span class="chip">JavaScript</span><span class="chip">localStorage</span>
+                            <button class="detail-btn" type="button" data-work="3">查看详情 <span aria-hidden="true">→</span></button>
+                        </div>
+                    </article>
+
+                    <article class="card work-card tilt-card" data-category="all" data-work="4" data-reveal>
+                        <div class="work-thumb"><img src="assets/work-4.svg" width="420" height="220" alt="个人主页作业整体的示意图"></div>
+                        <div class="work-body">
+                            <span class="work-index">PROJECT 04</span>
+                            <h4>个人主页（本页）</h4>
+                            <p>把结构、样式、交互串在一起：打字机、滚动揭示、筛选与弹窗。</p>
+                            <span class="chip">综合</span><span class="chip">响应式</span>
+                            <button class="detail-btn" type="button" data-work="4">查看详情 <span aria-hidden="true">→</span></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结尾小条：一句总结 + 回到顶部 -->
+        <section class="closing" aria-label="结语">
+            <div class="page closing-inner" data-reveal>
+                <div>
+                    <p class="section-kicker">KEEP LEARNING</p>
+                    <h2>下一个小目标：把想法都做成能打开的页面。</h2>
+                </div>
+                <a class="btn btn-primary" href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ 页脚 ============ -->
+    <footer class="site-footer">
+        <div class="page footer-inner">
+            <p class="footer-title">胡昊 · Web Programming 个人主页</p>
+            <nav aria-label="页脚链接">
+                <!-- 内部链接 + 外部链接 -->
+                <a href="#about">关于我</a><span aria-hidden="true">·</span>
+                <a href="#courses">专业与课程</a><span aria-hidden="true">·</span>
+                <a href="#works">技能与作品</a><span aria-hidden="true">·</span>
+                <a href="https://github.com/haomiaoyan" target="_blank" rel="noopener noreferrer">GitHub</a><span aria-hidden="true">·</span>
+                <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer">MDN</a><span aria-hidden="true">·</span>
+                <a href="https://www.w3school.com.cn/" target="_blank" rel="noopener noreferrer">W3School</a>
+            </nav>
+            <p class="footer-note">© 2026 Hu Hao · 纯 HTML + CSS + 原生 JavaScript 实现，无第三方库与网络依赖。页面内容仅用于课程作业展示。</p>
+        </div>
+    </footer>
+
+    <!-- 作品详情弹窗：默认 hidden，由 JS 控制显示 -->
+    <div class="modal" id="workModal" hidden>
+        <div class="modal-mask" data-close-modal></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" type="button" aria-label="关闭详情">×</button>
+            <p class="card-kicker" id="modalIndex">PROJECT</p>
+            <h3 id="modalTitle">作品标题</h3>
+            <p id="modalDesc">作品描述</p>
+            <h4>用到的知识点</h4>
+            <ul id="modalPoints"></ul>
+            <p class="modal-foot">这是课程练习项目，代码与截图一并收录在作业压缩包中。</p>
+        </div>
+    </div>
+
+    <!-- 轻提示 -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <!-- 回到顶部悬浮按钮 -->
+    <button class="to-top" id="toTop" type="button" aria-label="回到顶部" title="回到顶部">↑</button>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

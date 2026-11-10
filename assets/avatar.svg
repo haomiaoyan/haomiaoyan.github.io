@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280" role="img" aria-label="坐在电脑前写代码的同学插画">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ddf4ef"/><stop offset="1" stop-color="#e3ebff"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2fa79b"/><stop offset="1" stop-color="#6b8cf5"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="280" rx="20" fill="url(#bg)"/>
+  <circle cx="214" cy="62" r="46" fill="#ffffff" opacity=".45"/>
+  <circle cx="52" cy="212" r="34" fill="#ffd9c8" opacity=".7"/>
+  <path d="M0 232 Q70 206 140 232 T280 226 L280 280 L0 280 Z" fill="#ffffff" opacity=".55"/>
+
+  <!-- 头发与脸 -->
+  <path d="M94 118c0-34 21-56 48-56s48 22 48 56v14H94z" fill="#283b4a"/>
+  <ellipse cx="142" cy="118" rx="36" ry="40" fill="#ffd7bd"/>
+  <path d="M106 104c4-30 22-42 40-42 20 0 36 14 38 38-12-10-24-13-38-13-16 0-30 6-40 17z" fill="#283b4a"/>
+  <circle cx="129" cy="120" r="3.2" fill="#283b4a"/>
+  <circle cx="155" cy="120" r="3.2" fill="#283b4a"/>
+  <path d="M133 138q9 8 18 0" fill="none" stroke="#c98c6e" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="112" cy="130" r="6" fill="#ffb9a0" opacity=".55"/>
+  <circle cx="172" cy="130" r="6" fill="#ffb9a0" opacity=".55"/>
+
+  <!-- 身体 -->
+  <path d="M78 232c2-46 26-70 64-70s62 24 64 70z" fill="url(#shirt)"/>
+  <path d="M126 164h32l-16 22z" fill="#ffffff" opacity=".9"/>
+
+  <!-- 笔记本电脑 -->
+  <rect x="58" y="206" width="164" height="52" rx="7" fill="#dfe9f2"/>
+  <rect x="66" y="212" width="148" height="38" rx="4" fill="#20323f"/>
+  <path d="M80 224h34M80 232h58M80 240h26" stroke="#5fd0c2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M150 224h22M150 232h36M150 240h14" stroke="#6b8cf5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M48 258h184l10 12H38z" fill="#b8cad9"/>
+
+  <!-- 装饰 -->
+  <path d="M224 132l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z" fill="#ff9a78" opacity=".9"/>
+  <circle cx="48" cy="70" r="5" fill="#6b8cf5"/>
+  <circle cx="66" cy="52" r="3" fill="#2fa79b"/>
+  <text x="196" y="196" font-family="Consolas, monospace" font-size="17" font-weight="700" fill="#2fa79b" opacity=".85">&lt;/&gt;</text>
+</svg>
